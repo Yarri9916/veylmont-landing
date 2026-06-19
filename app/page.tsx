@@ -1,8 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Philosophy } from "@/components/philosophy";
-import { Features } from "@/components/features";
-import { Details } from "@/components/details";
+import { Editorial } from "@/components/editorial";
 import { Fabric } from "@/components/fabric";
 import { Comparison } from "@/components/comparison";
 import { Quote } from "@/components/quote";
@@ -16,8 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Philosophy />
-        <Features />
-        <Details />
+        <Editorial />
         <Fabric />
         <Comparison />
         <Quote />
