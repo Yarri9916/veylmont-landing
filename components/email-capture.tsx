@@ -36,11 +36,8 @@ export function EmailCapture() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <p className="text-[9px] tracking-[0.4em] uppercase text-[#6A6A6A] mb-12">
-            Early Access
-          </p>
           <h2 className="font-serif text-[clamp(2rem,5vw,3.25rem)] font-light text-[#1E1E1E] leading-[1.15] mb-10">
-            Be first to experience{" "}
+            Be First to Experience{" "}
             <em className="italic">VEYLMONT.</em>
           </h2>
           <p className="text-[15px] font-light text-[#6A6A6A] leading-[1.85] mb-16">
@@ -87,7 +84,7 @@ export function EmailCapture() {
           )}
 
           <p className="mt-8 text-[9px] tracking-[0.2em] uppercase text-[#6A6A6A]/40">
-            No spam. One email when we launch.
+            Early access to our inaugural release.
           </p>
         </motion.div>
       </div>
