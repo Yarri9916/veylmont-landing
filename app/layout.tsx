@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -47,7 +48,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="bg-cream text-brand-text antialiased">{children}</body>
+      <body className="bg-cream text-brand-text antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
