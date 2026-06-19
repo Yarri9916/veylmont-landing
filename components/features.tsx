@@ -3,33 +3,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shirt, Sparkles, Ruler, Gem } from "lucide-react";
 
-const cards = [
-  {
-    icon: Shirt,
-    title: "Premium Oxford Fabric",
-    description:
-      "Substantial weight and texture designed to age beautifully. The classic basket weave that defines the Oxford shirt.",
-  },
-  {
-    icon: Sparkles,
-    title: "Signature Collar Roll",
-    description:
-      "Traditional button-down collar engineered for a natural, effortless roll — the hallmark of the authentic OCBD.",
-  },
-  {
-    icon: Ruler,
-    title: "Tailored Fit",
-    description:
-      "Balanced proportions designed for comfort and elegance. Neither fashion-forward nor boxy — simply correct.",
-  },
-  {
-    icon: Gem,
-    title: "Small-Batch Production",
-    description:
-      "Quality over quantity. Every shirt is made in limited batches to ensure uncompromising attention to detail.",
-  },
+const items = [
+  { n: "01", title: "Button-down collar", body: "Engineered for a natural, consistent roll." },
+  { n: "02", title: "Double-layer yoke", body: "Added structure across the shoulders." },
+  { n: "03", title: "Box pleat and locker loop", body: "Classic Ivy details, precisely executed." },
+  { n: "04", title: "Flat-felled seams", body: "Durable, clean finish on every seam." },
+  { n: "05", title: "Adjustable cuffs", body: "Two-button placket for a precise fit." },
+  { n: "06", title: "Premium buttons", body: "Corozo or mother-of-pearl throughout." },
 ];
 
 export function Features() {
@@ -37,54 +18,45 @@ export function Features() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="features" className="py-28 lg:py-40 bg-[#F5F1EB]" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="py-28 lg:py-40 px-6 bg-[#F5F1EB]" ref={ref}>
+      <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="mb-16"
         >
-          <p className="text-[10px] tracking-[0.3em] uppercase text-brand-muted mb-6">
-            The Standard
+          <p className="text-[10px] tracking-[0.35em] uppercase text-[#6A6A6A] mb-4">
+            Construction
           </p>
-          <h2 className="font-serif text-5xl lg:text-6xl font-light text-brand-text">
-            Why VEYLMONT
+          <h2 className="font-serif text-4xl sm:text-5xl font-light text-[#1E1E1E]">
+            Built With Intention
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-brand-border">
-          {cards.map((card, i) => {
-            const Icon = card.icon;
-            return (
-              <motion.div
-                key={card.title}
-                initial={{ opacity: 0, y: 24 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.7,
-                  ease: [0.22, 1, 0.36, 1],
-                  delay: i * 0.08,
-                }}
-                className="bg-cream p-10 group hover:bg-brand-navy transition-colors duration-300 cursor-default"
-              >
-                <div className="mb-8">
-                  <Icon
-                    size={20}
-                    strokeWidth={1.25}
-                    className="text-brand-muted group-hover:text-white/60 transition-colors duration-300"
-                  />
-                </div>
-                <h3 className="font-serif text-2xl font-light text-brand-text group-hover:text-white transition-colors duration-300 mb-4 leading-tight">
-                  {card.title}
-                </h3>
-                <p className="text-sm font-light text-brand-muted group-hover:text-white/60 transition-colors duration-300 leading-relaxed">
-                  {card.description}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
+        {items.map((item, i) => (
+          <motion.div
+            key={item.n}
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: i * 0.08 }}
+          >
+            <div className="border-t border-[#E8E5DF] py-7 flex gap-8 items-baseline">
+              <span className="text-[10px] tracking-[0.2em] text-[#6A6A6A]/50 w-8 shrink-0">
+                {item.n}
+              </span>
+              <div className="flex flex-col sm:flex-row sm:gap-12 sm:items-baseline gap-1 flex-1">
+                <span className="font-serif text-xl font-light text-[#1E1E1E] sm:w-56 shrink-0">
+                  {item.title}
+                </span>
+                <span className="text-sm font-light text-[#6A6A6A] leading-relaxed">
+                  {item.body}
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+        <div className="border-t border-[#E8E5DF]" />
       </div>
     </section>
   );

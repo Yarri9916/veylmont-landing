@@ -1,12 +1,11 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { Heritage } from "@/components/heritage";
-import { Features } from "@/components/features";
-import { Details } from "@/components/details";
-import { Fabric } from "@/components/fabric";
-import { Timeline } from "@/components/timeline";
-import { Gallery } from "@/components/gallery";
 import { Philosophy } from "@/components/philosophy";
+import { Details } from "@/components/details";
+import { Features } from "@/components/features";
+import { Fabric } from "@/components/fabric";
+import { Comparison } from "@/components/comparison";
+import { Quote } from "@/components/quote";
 import { EmailCapture } from "@/components/email-capture";
 import { Footer } from "@/components/footer";
 
@@ -16,13 +15,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Heritage />
-        <Features />
-        <Details />
-        <Fabric />
-        <Timeline />
-        <Gallery />
         <Philosophy />
+        <Details />
+        <Features />
+        <Fabric />
+        <Comparison />
+        <Quote />
         <EmailCapture />
       </main>
       <Footer />
