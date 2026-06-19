@@ -17,7 +17,7 @@ export function Footer() {
           </div>
           <nav className="flex flex-wrap gap-x-8 gap-y-3">
             {[
-              { label: "Instagram", href: "https://instagram.com/veylmont" },
+              { label: "Instagram", href: "https://instagram.com/veylmontshirts" },
               { label: "Contact", href: "mailto:hello@veylmont.in" },
               { label: "Newsletter", href: "#waitlist" },
             ].map((link) => (
