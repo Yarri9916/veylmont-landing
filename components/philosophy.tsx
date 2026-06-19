@@ -9,7 +9,7 @@ export function Philosophy() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-48 px-8" ref={ref}>
+    <section className="py-28 px-8" ref={ref}>
       <div className="max-w-[600px] mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

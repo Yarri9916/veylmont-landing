@@ -29,7 +29,7 @@ export function EmailCapture() {
   };
 
   return (
-    <section id="waitlist" className="py-48 px-8 bg-[#F5F1EB]" ref={ref}>
+    <section id="waitlist" className="py-28 px-8 bg-[#F5F1EB]" ref={ref}>
       <div className="max-w-[600px] mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

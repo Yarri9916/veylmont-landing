@@ -55,7 +55,7 @@ export function Editorial() {
   return (
     <section id="details" className="px-8">
       {/* Intro */}
-      <div className="max-w-[600px] mx-auto py-32 border-t border-[#E8E5DF]">
+      <div className="max-w-[600px] mx-auto py-20 border-t border-[#E8E5DF]">
         <FadeUp>
           <h2 className="font-serif text-[clamp(2rem,5vw,3rem)] font-light text-[#1E1E1E] leading-[1.15] mb-8">
             Designed With Intention.
@@ -70,7 +70,7 @@ export function Editorial() {
       <div className="max-w-[600px] mx-auto">
         {sections.map((s, i) => (
           <FadeUp key={s.heading} delay={i * 0.05}>
-            <div className="border-t border-[#E8E5DF] py-24">
+            <div className="border-t border-[#E8E5DF] py-14">
               <p className="text-[9px] tracking-[0.35em] uppercase text-[#6A6A6A] mb-8">
                 {s.heading}
               </p>

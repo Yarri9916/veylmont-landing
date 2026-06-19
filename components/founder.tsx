@@ -9,7 +9,7 @@ export function Founder() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-40 px-8 border-t border-[#E8E5DF]" ref={ref}>
+    <section className="py-24 px-8 border-t border-[#E8E5DF]" ref={ref}>
       <div className="max-w-[600px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 14 }}

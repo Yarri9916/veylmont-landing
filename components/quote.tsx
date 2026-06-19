@@ -9,7 +9,7 @@ export function Quote() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-52 px-8 border-t border-[#E8E5DF]" ref={ref}>
+    <section className="py-28 px-8 border-t border-[#E8E5DF]" ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: 14 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
