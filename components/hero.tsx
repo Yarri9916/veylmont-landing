@@ -12,7 +12,7 @@ export function Hero() {
         className="max-w-[600px]"
       >
         <p className="text-[9px] tracking-[0.4em] uppercase text-[#6A6A6A] mb-12">
-          The Inaugural Collection · Autumn 2026
+          The Inaugural Collection &middot; Autumn 2026
         </p>
 
         <h1 className="font-serif text-[clamp(3rem,8vw,5.5rem)] font-light text-[#1E1E1E] leading-[1.05] mb-10">
