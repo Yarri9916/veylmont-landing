@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
@@ -22,7 +22,7 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 const sections = [
   {
     heading: "THE COLLAR",
-    body: "A soft, natural roll — not forced flat, not pinned stiff. The way a button-down collar should sit.",
+    body: "A soft, natural roll -- not forced flat, not pinned stiff. The way a button-down collar should sit.",
   },
   {
     heading: "THE FABRIC",
@@ -34,13 +34,32 @@ const sections = [
   },
   {
     heading: "THE CONSTRUCTION",
+    intro: "Small details, chosen for how the shirt wears over time.",
     list: [
-      "Double-layer yoke for structure",
-      "Box pleat for mobility",
-      "Locker loop",
-      "Flat-felled seams — no raw edges",
-      "Two-button adjustable cuffs",
-      "Horn buttons, not plastic",
+      {
+        title: "Double-layer yoke",
+        description: "For structure across the shoulders.",
+      },
+      {
+        title: "Box pleat",
+        description: "For ease of movement.",
+      },
+      {
+        title: "Locker loop",
+        description: "A classic Ivy detail.",
+      },
+      {
+        title: "Flat-felled seams",
+        description: "Clean inside and out.",
+      },
+      {
+        title: "Two-button adjustable cuffs",
+        description: "For a considered fit.",
+      },
+      {
+        title: "Horn-style buttons",
+        description: "Subtle, durable, and restrained.",
+      },
     ],
   },
 ];
@@ -71,11 +90,24 @@ export function Editorial() {
                   {s.body}
                 </p>
               )}
+              {s.intro && (
+                <p className="text-[14px] font-light text-[#6A6A6A] leading-[1.85] max-w-[420px] mb-8">
+                  {s.intro}
+                </p>
+              )}
               {s.list && (
-                <ul className="space-y-3 mt-1">
+                <ul className="mt-2 border-t border-[#E8E5DF]">
                   {s.list.map((item) => (
-                    <li key={item} className="text-[14px] font-light text-[#3A3A3A] leading-relaxed">
-                      {item}
+                    <li
+                      key={item.title}
+                      className="border-b border-[#E8E5DF] py-5"
+                    >
+                      <p className="font-serif text-[clamp(1.25rem,3vw,1.65rem)] font-light text-[#1E1E1E] leading-tight">
+                        {item.title}
+                      </p>
+                      <p className="mt-2 text-[13px] font-light text-[#6A6A6A] leading-relaxed">
+                        {item.description}
+                      </p>
                     </li>
                   ))}
                 </ul>
