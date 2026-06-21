@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-function FadeUp({
-  children,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  delay?: number;
-}) {
+function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
@@ -28,25 +22,25 @@ function FadeUp({
 const sections = [
   {
     heading: "THE COLLAR",
-    body: "Traditional button-down proportions engineered for a natural roll.",
+    body: "A soft, natural roll — not forced flat, not pinned stiff. The way a button-down collar should sit.",
   },
   {
     heading: "THE FABRIC",
-    body: "Substantial Oxford cloth that develops character with wear.",
+    body: "100% cotton Oxford cloth. Textured, breathable, and built to soften with every wash.",
   },
   {
     heading: "THE FIT",
-    body: "Designed for Indian proportions with comfortable shoulder mobility and balanced ease.",
+    body: "Proportioned for the Indian frame. Clean through the shoulder, comfortable through the chest.",
   },
   {
-    heading: "THE DETAILS",
+    heading: "THE CONSTRUCTION",
     list: [
-      "Double-layer yoke",
-      "Box pleat",
+      "Double-layer yoke for structure",
+      "Box pleat for mobility",
       "Locker loop",
-      "Flat-felled seams",
-      "Adjustable cuffs",
-      "Premium buttons",
+      "Flat-felled seams — no raw edges",
+      "Two-button adjustable cuffs",
+      "Horn buttons, not plastic",
     ],
   },
 ];
@@ -54,38 +48,33 @@ const sections = [
 export function Editorial() {
   return (
     <section id="details" className="px-8">
-      {/* Intro */}
       <div className="max-w-[600px] mx-auto py-20 border-t border-[#E8E5DF]">
         <FadeUp>
-          <h2 className="font-serif text-[clamp(2rem,5vw,3rem)] font-light text-[#1E1E1E] leading-[1.15] mb-8">
-            Designed With Intention.
+          <h2 className="font-serif text-[clamp(2rem,5vw,3rem)] font-light text-[#1E1E1E] leading-[1.15] mb-6">
+            What makes it different.
           </h2>
           <p className="text-[15px] font-light text-[#6A6A6A] leading-[1.9]">
-            A quiet study in proportion, construction, and timeless details.
+            Every detail exists for a reason.
           </p>
         </FadeUp>
       </div>
 
-      {/* Editorial blocks */}
       <div className="max-w-[600px] mx-auto">
         {sections.map((s, i) => (
           <FadeUp key={s.heading} delay={i * 0.05}>
-            <div className="border-t border-[#E8E5DF] py-14">
-              <p className="text-[9px] tracking-[0.35em] uppercase text-[#6A6A6A] mb-8">
+            <div className="border-t border-[#E8E5DF] py-12">
+              <p className="text-[9px] tracking-[0.35em] uppercase text-[#6A6A6A] mb-6">
                 {s.heading}
               </p>
               {s.body && (
-                <p className="font-serif text-[clamp(1.5rem,4vw,2.25rem)] font-light text-[#1E1E1E] leading-[1.3] max-w-[520px]">
+                <p className="font-serif text-[clamp(1.35rem,3.5vw,2rem)] font-light text-[#1E1E1E] leading-[1.35] max-w-[520px]">
                   {s.body}
                 </p>
               )}
               {s.list && (
-                <ul className="space-y-4 mt-2">
+                <ul className="space-y-3 mt-1">
                   {s.list.map((item) => (
-                    <li
-                      key={item}
-                      className="font-serif text-[clamp(1.25rem,3.5vw,1.875rem)] font-light text-[#1E1E1E]"
-                    >
+                    <li key={item} className="text-[14px] font-light text-[#3A3A3A] leading-relaxed">
                       {item}
                     </li>
                   ))}
