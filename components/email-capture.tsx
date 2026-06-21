@@ -36,12 +36,12 @@ export function EmailCapture() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <h2 className="font-serif text-[clamp(2rem,5vw,3.25rem)] font-light text-[#1E1E1E] leading-[1.15] mb-10">
-            Be First to Experience{" "}
-            <em className="italic">VEYLMONT.</em>
+          <h2 className="font-serif text-[clamp(2rem,5vw,3.25rem)] font-light text-[#1E1E1E] leading-[1.15] mb-8">
+            Reserve your place.
           </h2>
-          <p className="text-[15px] font-light text-[#6A6A6A] leading-[1.85] mb-16">
-            Join the mailing list for early access to our inaugural release.
+          <p className="text-[15px] font-light text-[#6A6A6A] leading-[1.85] mb-14">
+            The inaugural VEYLMONT shirt launches Autumn 2026. Join the waitlist
+            for first access and updates.
           </p>
         </motion.div>
 
@@ -84,7 +84,7 @@ export function EmailCapture() {
           )}
 
           <p className="mt-8 text-[9px] tracking-[0.2em] uppercase text-[#6A6A6A]/40">
-            Early access to our inaugural release.
+            No spam. One shirt. Autumn 2026.
           </p>
         </motion.div>
       </div>
